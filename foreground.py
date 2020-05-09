@@ -1,7 +1,7 @@
 #Works only for black background
 import cv2
 #Read The Image
-img = cv2.imread(r'50.png')
+img = cv2.imread(r'Test_images\50.png')
 
 grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow('GRAYSCALE Image',grayscale)
