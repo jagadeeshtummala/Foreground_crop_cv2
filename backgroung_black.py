@@ -2,9 +2,9 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-%matplotlib inline
 
-img=cv2.imread(r'Photos1\50.jpg')
+
+img=cv2.imread(r'Photos1\50.jpg') # Use backslash(\) in windows and for Others use slash(/)
 img=cv2.resize(img,(img.shape[1]//8,img.shape[0]//8),cv2.INTER_CUBIC)
 print(img.shape)
 mask=np.zeros(img.shape[:2],np.uint8)
@@ -19,7 +19,7 @@ mask2=np.where((mask==2)|(mask==0),0,1).astype('uint8')
 img=img*mask2[:,:,np.newaxis]
 cv2.imshow('Image',img)
 cv2.imshow('Image1',img1)
-cv2.imwrite(r'Test_images\50.png',img)
+cv2.imwrite(r'Test_images\50.png',img) # Use backslash(\) in windows and for Others use slash(/)
 #cv2.imshow('Image',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
